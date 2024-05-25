@@ -45,22 +45,22 @@
         "heading_haFpzg": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Veterinarian-Approved",
             "heading_size": "h1"
           }
         },
         "text_rtfwFQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>All products from Dr Ernie's are vetted and approved by a qualified veterinarian, ensuring top quality care for your pet.<\/p>",
             "text_style": "body"
           }
         },
         "button_hiUYKz": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "View Products",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style_secondary": false
           }
         }
@@ -71,6 +71,7 @@
         "button_hiUYKz"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/dr_ernie_-_veterinary_doctor.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
