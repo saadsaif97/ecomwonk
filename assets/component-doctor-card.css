@@ -365,6 +365,7 @@
 
 .doctor-card__heading {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .doctor-card__text p {
