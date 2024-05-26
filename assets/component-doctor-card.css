@@ -345,9 +345,12 @@
 }
 
 .doctor-card__content > :first-child:is(.doctor-card__heading),
-.doctor-card__text--caption + .doctor-card__heading,
 .doctor-card__text--caption:first-child {
   margin-top: 0;
+}
+
+.doctor-card__text--caption {
+  font-weight: bold;
 }
 
 .doctor-card__content :last-child:is(.doctor-card__heading),

@@ -75,6 +75,7 @@
                   </h2>
                 {%- when 'caption' -%}
                   <p
+                    style="color: {{ block.settings.caption_color }}"
                     class="doctor-card__text doctor-card__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
                   >
@@ -381,8 +382,14 @@
               "label": "t:sections.doctor-card.blocks.caption.settings.text_style.options__2.label"
             }
           ],
-          "default": "caption-with-letter-spacing",
+          "default": "subtitle",
           "label": "t:sections.doctor-card.blocks.caption.settings.text_style.label"
+        },
+        {
+          "label": "Caption color",
+          "type": "color",
+          "id": "caption_color",
+          "default": "#ffc65c"
         },
         {
           "type": "select",
