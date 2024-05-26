@@ -29,12 +29,19 @@
     <div class="doctor-card doctor-card--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="doctor-card__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} doctor-card__grid--reverse{% endif %}">
         <div class="doctor-card__media-item doctor-card__media-item--{{ section.settings.desktop_image_width }} doctor-card__media-item--{{ section.settings.desktop_content_position }} grid__item">
+        
+          {% comment %} badge image {% endcomment %}
+          {%- if section.settings.badge_image != blank -%}
+            {{ section.settings.badge_image |  image_url: width: 120 |  image_tag: width: 120, height: 120, class: 'badge_image' }}
+          {%- endif -%}
+        
           <div
             class="doctor-card__media doctor-card__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} doctor-card__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
             {% if section.settings.height == 'adapt' and section.settings.image != blank %}
               style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
             {% endif %}
           >
+            {% comment %} section image {% endcomment %}
             {%- if section.settings.image != blank -%}
               {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
                 {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
@@ -118,8 +125,9 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "badge",
-      "label": "Badge Image"
+      "id": "badge_image",
+      "label": "Badge Image",
+      "info": "Please use a square image"
     },
     {
       "type": "image_picker",

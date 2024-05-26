@@ -47,6 +47,7 @@
           "settings": {
             "caption": "Dr. Ernie Sanderson",
             "text_style": "subtitle",
+            "caption_color": "#ffc65c",
             "text_size": "large"
           }
         },
@@ -80,6 +81,7 @@
         "button_hiUYKz"
       ],
       "settings": {
+        "badge_image": "shopify:\/\/shop_images\/approval_by_veterinarians.png",
         "image": "shopify:\/\/shop_images\/dr_ernie_-_veterinary_doctor.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
